@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Marriage Certificate</title>
+  <style>
+    body { margin:0; background:#222; user-select:none; }
+    #viewer { text-align:center; padding:20px; }
+    img { max-width:95%; box-shadow:0 0 10px #000; }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <div id="viewer">
+    <img src="certificate.jpg" draggable="false">
+  </div>
+
+  <script>
+    document.addEventListener("keydown", e => {
+      if (
+        (e.ctrlKey && ["s","p","u"].includes(e.key.toLowerCase())) ||
+        e.key === "F12"
+      ) e.preventDefault();
+    });
+  </script>
+</body>
+</html>
